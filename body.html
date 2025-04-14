@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Background Color Changer</title>
+   <style>
+     body {
+       margin: 0;
+       height: 100vh;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       font-family: Arial, sans-serif;
+       transition: background-color 0.5s ease;
+     }
+     button {
+       padding: 10px 20px;
+       font-size: 18px;
+       cursor: pointer;
+       border: none;
+       border-radius: 5px;
+       background-color: #007BFF;
+       color: white;
+       outline: none;
+       transition: background-color 0.3s ease;
+     }
+     button:hover {
+       background-color: #0056b3;
+     }
+   </style>
+ </head>
+ <body>
+   <h1>Click the button to change the background color!</h1>
+   <h2> ❤🧡Made in INDIA by  YUVARAJ ❤🧡</h2>
+   <button id="colorChanger">Change Color</button>
+   <script>
+     const colors = [
+       "#FF5733", "#33FF57", "#5733FF", "#F5B041", "#8E44AD", "#1F618D",
+       "#DFFF00", "#FFBF00", "#FF7F50", "#DE3163", "#9FE2BF", "#40E0D0",
+       "#6495ED", "#CCCCFF", "#FF6347", "#4682B4", "#808080", "#008080",
+       "#800000", "#FFD700", "#ADFF2F", "#7FFFD4", "#5F9EA0", "#DC143C",
+       "#8A2BE2", "#00CED1", "#9400D3", "#FF4500", "#6A5ACD", "#00FF7F",
+       "#FF1493", "#20B2AA", "#778899", "#B22222", "#FF69B4", "#E9967A",
+       "#FF00FF", "#8B4513", "#B0C4DE", "#7FFF00", "#FF6347", "#D2691E",
+       "#4B0082", "#F4A460", "#708090", "#9ACD32", "#2E8B57", "#D8BFD8",
+       "#A52A2A", "#40E0D0", "#FFDAB9", "#7B68EE", "#C71585", "#B8860B",
+       "#CD5C5C", "#4CAF50", "#9C27B0", "#3F51B5", "#FFEB3B", "#03A9F4",
+       "#00BCD4", "#8BC34A", "#FF5722", "#795548", "#607D8B", "#C2185B",
+       "#E040FB", "#7C4DFF", "#536DFE", "#0288D1", "#009688", "#43A047",
+       "#FDD835", "#FB8C00", "#D32F2F", "#303F9F", "#616161", "#9E9E9E",
+       "#76FF03", "#F50057", "#2979FF", "#651FFF", "#AA00FF", "#C6FF00",
+       "#00E676", "#1DE9B6", "#00BFA5", "#FF6D00", "#FFAB00", "#FF4081"
+     ];
+ 
+     let index = 0;
+     const button = document.getElementById("colorChanger");
+     button.addEventListener("click", () => {
+       document.body.style.backgroundColor = colors[index];
+       index = (index + 1) % colors.length;
+     });
+   </script>
+ </body>
+ </html>
